@@ -1,0 +1,132 @@
+* {
+	font-family         : "Montserrat", sans-serif;
+	font-weight         : 400;
+	font-style          : normal;
+	line-height         : 1.5;
+	margin              : 0;
+	padding             : 0;
+	font-optical-sizing : auto;
+}
+
+:root {
+	--color-dark-navy : #202027;
+	--color-yellow    : #e1ff8f;
+	--color-white     : #ffffff;
+	--color-green     : #bcec30;
+}
+
+.main {
+	display   : flex;
+	flex-flow : column nowrap;
+}
+
+.welcome {
+	display          : flex;
+	align-items      : flex-start;
+	flex-flow        : column nowrap;
+	box-sizing       : border-box;
+	padding          : 196px 0 156px 120px;
+	background-color : var(--color-yellow);
+}
+
+.welcome__text__container {
+	display         : flex;
+	flex-flow       : column nowrap;
+	justify-content : space-between;
+	gap             : 24px;
+}
+
+.welcome__heading {
+	font-size        : 64px;
+	font-weight      : 700;
+	width            : fit-content;
+}
+
+.welcome__text {
+	font-size        : 24px;
+	width            : fit-content;
+}
+
+.welcome__text--bold {
+	font-weight : bold;
+}
+
+.welcome__button {
+	font-size        : 24px;
+	font-weight      : 600;
+	width            : fit-content;
+	padding          : 18px 65px;
+	color            : var(--color-white);
+	border-radius    : 60px;
+	background-color : var(--color-dark-navy);
+
+	&:hover {
+		cursor           : pointer;
+		color            : var(--color-dark-navy);
+		background-color : var(--color-white);
+	}
+}
+
+.scrolling__strip {
+	display          : flex;
+	width            : 100%;
+	background-color : var(--color-green);
+}
+
+.scrolling__strip__container {
+	display : flex;
+	padding : 24px 0;
+	gap     : 32px;
+	animation : scroll 15s linear infinite;
+
+	&::after {
+		display : flex;
+		content : '';
+	}
+}
+
+.scrolling__strip__text {
+	font-size      : 30px;
+	font-weight    : 700;
+	display        : inline-block;
+	white-space    : nowrap;
+	text-transform : uppercase;
+
+	&::after {
+		margin-left : 40px;
+		content     : "•";
+	}
+}
+
+@keyframes scroll {
+	0% {
+		transform : translateX(0);
+	}
+	100% {
+		transform : translateX(-50%);
+	}
+}
+
+.about {
+	background-color: var(--color-dark-navy);
+	display: flex;
+	box-sizing: border-box;
+	padding: 95px 0 0 120px;
+}
+
+.about__container {
+	display: flex;
+	gap: 64px;
+	flex-flow: column nowrap;
+}
+
+.about__heading {
+	font-weight: 700;
+	font-size: 64px;
+	color: var(--color-white);
+}
+
+.about__paragraph {
+	color: var(--color-white);
+	font-size: 24px;
+}
