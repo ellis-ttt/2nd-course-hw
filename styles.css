@@ -8,6 +8,8 @@
 	font-optical-sizing : auto;
 }
 
+/**/
+
 :root {
 	--color-dark-navy : #202027;
 	--color-yellow    : #e1ff8f;
@@ -116,19 +118,19 @@
 	flex-flow : column nowrap;
 }
 
-.content-block {
+.text-content-block {
 	display   : flex;
 	flex-flow : column nowrap;
 	gap       : 24px;
 }
 
-.content-block__heading {
+.text-content-block__heading {
 	font-weight : 700;
 	font-size   : 64px;
 	color       : var(--color-white);
 }
 
-.content-block__text {
+.text-content-block__text {
 	color     : var(--color-white);
 	font-size : 24px;
 }
