@@ -1,0 +1,14 @@
+@use "../mixins" as m;
+
+.game-list {
+  display: grid;
+  gap: 32px;
+
+  &--grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--full-width {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,43 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.game-card {
+  @include m.card-base(v.$radius-lg, v.$color-white);
+  gap: 16px;
+
+  &__content { padding: 32px; }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: v.$radius-lg;
+  }
+
+  &__number {
+    font-size: v.$fs-sm;
+    font-weight: v.$font-weight-semi;
+    text-transform: uppercase;
+    padding: 0 0 0 16px;
+    opacity: 0.6;
+    color: v.$color-dark-navy;
+  }
+
+  &__title {
+    font-size: v.$fs-xl;
+    font-weight: v.$font-weight-bold;
+    color: v.$color-dark-navy;
+    max-width: 320px;
+  }
+
+  &--full-width {
+    align-items: center;
+    flex-flow: row nowrap;
+
+    .game-card__image {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px;
+    }
+  }
+}

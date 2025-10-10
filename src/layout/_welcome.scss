@@ -1,0 +1,27 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.welcome {
+  @include m.flex-col(null, flex-start);
+  box-sizing: border-box;
+  padding: 196px 0 156px 120px;
+  background-color: v.$color-yellow;
+
+  &__container { justify-content: space-between; }
+
+  &__heading {
+    font-size: v.$fs-xxl;
+    font-weight: v.$font-weight-bold;
+    width: fit-content;
+  }
+
+  &__text {
+    font-size: v.$fs-md;
+    width: fit-content;
+
+    &--bold { font-weight: bold; }
+  }
+
+  // Note: .welcome__button is intentionally not styled directly here
+  // because the markup already uses the reusable .btn class.
+}

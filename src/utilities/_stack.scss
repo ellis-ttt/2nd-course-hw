@@ -1,0 +1,13 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.stack {
+  @include m.flex-col();
+}
+
+// Generate gap utility modifiers from $spaces scale
+@each $space in v.$spaces {
+  .stack--gap-#{$space} {
+    gap: #{$space}px;
+  }
+}

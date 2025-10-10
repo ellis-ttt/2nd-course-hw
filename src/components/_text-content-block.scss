@@ -1,0 +1,13 @@
+@use "../variables" as v;
+
+.text-content-block {
+  &__heading {
+    font-size: v.$fs-xxl;
+    font-weight: v.$font-weight-bold;
+    color: v.$color-white;
+  }
+  &__text {
+    font-size: v.$fs-md;
+    color: v.$color-white;
+  }
+}

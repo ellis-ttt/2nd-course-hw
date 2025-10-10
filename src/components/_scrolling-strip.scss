@@ -1,0 +1,33 @@
+@use "../variables" as v;
+
+.scrolling-strip {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  background-color: v.$color-green;
+
+  &__container {
+    display: flex;
+    padding: 24px 0;
+    animation: scroll 15s linear infinite;
+    gap: 32px;
+  }
+
+  &__text {
+    font-size: v.$fs-lg;
+    font-weight: v.$font-weight-bold;
+    display: inline-block;
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    &::after {
+      margin-left: 40px;
+      content: "•";
+    }
+  }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
