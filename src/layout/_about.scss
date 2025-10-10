@@ -1,0 +1,9 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.about {
+  display: flex;
+  box-sizing: border-box;
+  padding: 95px 0 50px 120px;
+  background-color: v.$color-dark-navy;
+}

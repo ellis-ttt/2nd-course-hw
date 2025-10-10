@@ -1,0 +1,38 @@
+@use "./variables" as v;
+
+@mixin flex-col($gap: null, $align: null, $justify: null) {
+  display: flex;
+  flex-flow: column nowrap;
+  @if $gap != null { gap: $gap; }
+  @if $align != null { align-items: $align; }
+  @if $justify != null { justify-content: $justify; }
+}
+
+@mixin grid($cols, $gap: null) {
+  display: grid;
+  grid-template-columns: $cols;
+  @if $gap != null { gap: $gap; }
+}
+
+@mixin button($bg, $color) {
+  font-size: v.$fs-md;
+  font-weight: v.$font-weight-semi;
+  width: fit-content;
+  padding: 18px 65px;
+  color: $color;
+  border-radius: v.$radius-pill;
+  background-color: $bg;
+
+  &:hover {
+    cursor: pointer;
+    color: $bg;
+    background-color: $color;
+  }
+}
+
+@mixin card-base($radius: v.$radius-lg, $bg: v.$color-white) {
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: $radius;
+  background-color: $bg;
+}
